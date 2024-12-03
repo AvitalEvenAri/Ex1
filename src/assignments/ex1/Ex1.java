@@ -87,7 +87,7 @@
 
             // If the base is an uppercase letter (A–G)
             if (baseChar >= 'A' && baseChar <= 'G') {
-                int base = baseChar - 'A' + 10; // Convert 'A' to 10, 'B' to 11, ..., 'G' to 16
+                int base = baseChar - 'A' + 10; // Convert 'A' to 10, 'B' to 11,'G' to 16
                 return base; // Valid base between 10–16
             }
 
@@ -182,26 +182,39 @@
          * @param base the basis [2,16]
          * @return a String representing a number (in base) equals to num, or an empty String (in case of wrong input).
          */
+
+
         public static String int2Number(int num, int base) {
+            // Validate the input: return an empty string for invalid inputs
             if (num < 0 || base < 2 || base > 16) {
-                return ""; // Return an empty string for invalid input
+                return ""; // Negative number or invalid base
             }
 
-            StringBuilder numberPart = new StringBuilder();
-            int temp = num;
+            StringBuilder numberPart = new StringBuilder(); // StringBuilder to construct the number
+            int temp = num; // Temporary variable to hold the number during conversion
+
             while (temp > 0) {
+                // Calculate the remainder when dividing the number by the base
                 int digit = temp % base;
+                // Convert the digit to a character:
+                // - If less than 10, use '0' + digit
+                // - If 10 or greater, use 'A' + (digit - 10) for bases > 10
                 char digitChar = (digit < 10) ? (char) ('0' + digit) : (char) ('A' + digit - 10);
-                numberPart.insert(0, digitChar);
-                temp /= base;
+                numberPart.insert(0, digitChar); // Add the digit to the start of the numberPart
+                temp /= base; // Reduce the number by dividing it by the base
             }
 
+            // Handle the case where the number is 0 (empty StringBuilder)
             if (numberPart.isEmpty()) {
-                numberPart.append("0");
+                numberPart.append("0"); // The number 0 in any base is represented as "0"
             }
 
+            // Append the base to the number representation:
+            // - If the base is less than 10, append it as a digit
+            // - If the base is 10 or greater, append it as a character ('A' = 10, ..., 'G' = 16)
             return numberPart + "b" + (base < 10 ? String.valueOf(base) : String.valueOf((char) ('A' + base - 10)));
         }
+
 
 
 

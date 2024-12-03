@@ -86,7 +86,7 @@ public class Ex1Test {
         String s10 = "12345bA"; // Decimal "12345"
         v = Ex1.number2Int(s10); // 12345
         assertEquals(v, 12345);
-        String binary = Ex1.int2Number(v, 2); // Binary form
+        String binary = Ex1.int2Number(v, 2); // Binary
         v = Ex1.number2Int(binary); // Back to decimal
         assertEquals(v, 12345);
 
@@ -204,16 +204,16 @@ public class Ex1Test {
 
     @Test
     void equalsTest() {
-        // Case 1: Equal positive numbers
+        // Case 1:  positive numbers
         assertTrue(Ex1.equals("123", "123"), "Failed for equal positive numbers");
 
-        // Case 2: Equal negative numbers
+        // Case 2:  negative numbers
         assertTrue(Ex1.equals("-123", "-123"), "Failed for equal negative numbers");
 
-        // Case 3: One positive and one negative (not equal)
+        // Case 3: One positive and one negative
         assertFalse(Ex1.equals("123", "-123"), "Failed for positive and negative numbers");
 
-        // Case 4: Equal numbers with leading zeros
+        // Case 4:  numbers with leading zeros
         assertTrue(Ex1.equals("00123", "123"), "Failed for numbers with leading zeros");
 
         // Case 5: Different numbers
@@ -224,7 +224,7 @@ public class Ex1Test {
         assertFalse(Ex1.equals("123", "456bA"), "Failed for invalid number in second parameter");
 
 
-        // Case 8: One null
+        // Case 8: one null
         assertFalse(Ex1.equals(null, "123"), "Failed when first parameter is null");
         assertFalse(Ex1.equals("123", null), "Failed when second parameter is null");
 
