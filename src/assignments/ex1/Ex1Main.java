@@ -1,5 +1,5 @@
 package assignments.ex1;
-
+//ghjkjhghjkjhg
 import java.util.Scanner;
 
 public class Ex1Main {
