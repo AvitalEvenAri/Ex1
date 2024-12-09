@@ -1,5 +1,4 @@
 package assignments.ex1;
-//ghjkjhghjkjhg
 import java.util.Scanner;
 
 public class Ex1Main {
@@ -49,8 +48,8 @@ public class Ex1Main {
             }
 
             // Calculate the sum and product of the two numbers
-            int sum = n1 + n2; // Calculate the sum
-            int product = n1 * n2; // Calculate the product
+            int sum = n1 + n2; //Calculate the sum
+            int product = n1 * n2; //Calculate the product
 
             // Convert the sum and product to the selected base
             String sumBase = Ex1.int2Number(sum, base); // Convert the sum to the chosen base
