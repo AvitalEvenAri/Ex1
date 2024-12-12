@@ -1,19 +1,22 @@
-Solution for an assignment 1 in the "Introduction to Computer Science" course in Java at Ariel University.
-Ex1 - Number Formatting Converter
-Author
-ID: 325310142
-Overview
-This project implements a number formatting converter and calculator for bases 2 to 16, using the <number>b<base> format. It supports base conversions, numerical operations, and validation for formatted numbers.
+# Assignment 1: Number Formatting Converter  
+**Course**: Introduction to Computer Science, Ariel University  
+**Author**: Avital Even Ari, ID: 325310142  
 
-Functions
-number2Int: Converts formatted strings to decimal. Returns -1 for invalid inputs.
-isNumber: Validates the <number>b<base> format for bases 2 to 16.
-int2Number: Converts decimal numbers to a specified base. Returns an empty string if the input is invalid.
-equals: Placeholder function (raises an exception as per assignment instructions).
-maxIndex: Finds the index of the largest number in an array, ignoring invalid numbers.
-Testing
-Comprehensive unit tests are provided in Ex1Test.java, covering valid inputs, invalid inputs, and edge cases for all functions.
+## Overview  
+A converter and calculator for numbers in `<number>b<base>` format (bases 2–16). Supports base conversions, operations, and validation.
 
-examples: Ab2 → 1010. 123bG → 7B . Invalid examples: 1bb2 → Multiple bs. 1234b18 → Base outside the range 2–16. -1011b2 → Negative numbers.
+## Key Functions  
+- **`number2Int`**: Converts formatted strings to decimal. Returns `-1` for invalid inputs.  
+- **`isNumber`**: Validates numbers in `<number>b<base>` format.  
+- **`int2Number`**: Converts decimal numbers to specified bases.  
+- **`maxIndex`**: Finds the largest number index in an array, ignoring invalid inputs.
+
+## Examples  
+- Valid: `Ab2 → 1010`, `123b16 → 7B`.  
+- Invalid: `1bb2 → Error`, `1234b18 → Error`.  
+
+## Testing  
+Comprehensive tests are provided in `Ex1Test.java` for valid, invalid, and edge cases.
+
 
 
