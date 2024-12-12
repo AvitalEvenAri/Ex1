@@ -16,4 +16,13 @@ This project implements a number formatting converter and calculator for bases 2
 ## Testing
 Comprehensive unit tests are provided in `Ex1Test.java`, covering valid inputs, invalid inputs, and edge cases for all functions.
 
+Valid examples:
+1011b2 → Binary.
+A23bA → Decimal.
+FFbG → Hexadecimal.
+Invalid examples:
+1bb2 → Multiple bs.
+1234b18 → Base outside the range 2–16.
+-1011b2 → Negative numbers.
+
 ---
